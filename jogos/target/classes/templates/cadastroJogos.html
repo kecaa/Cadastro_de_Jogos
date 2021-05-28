@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title>CADASTRO DE JOGOS</title>
+</head>
+<body>
+<div class="container">
+    <h1>CADASTRO DE JOGOS</h1>
+
+    <form method="POST" action="/adicionarJogos">
+        <div class="form-group">
+            <label for="nome"> Nome do Jogo</label>
+            <input class="form-control" type="text" name="nomeJogo" id="nomeJogo" th:value="${jogo.nomeJogo}">
+        </div>
+        <div class="form-group">
+            <label for="genero"> Gênero do Jogo </label>
+            <input class="form-control" type="text" name="genero" id="genero" th:value="${jogo.genero}">
+        </div>
+        </div>
+        <div class="form-group">
+            <label for="preco"> Preço</label>
+            <input class="form-control"type="text" name="preco" id="preco" th:value="${jogo.preco}">
+        </div>
+        <div>
+            <input type="hidden" name="id" id="id" th:value="${jogo.id}">
+        </div>
+        <div>
+            <input class="btn btn-outline-success" type="submit" value="ENVIAR">
+        </div>
+    </form>
+
+
+    <a class="btn btn-outline-primary" href="/jogos"> VOLTAR </a>
+</div>
+    <script src="/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
